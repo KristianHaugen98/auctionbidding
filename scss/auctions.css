@@ -1,0 +1,10 @@
+#auctions-list {
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+#auctions-list .auction-card {
+  transition: transform 0.2s;
+}
+#auctions-list .auction-card:hover {
+  transform: translateY(-5px);
+}/*# sourceMappingURL=auctions.css.map */

@@ -1,0 +1,59 @@
+// Importing the right SCSS-files in right order
+
+@import "variables";
+@import "mixins";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "navbar";
+@import "hero";
+@import "footer";
+@import "carousel.scss";
+@import "search.scss";
+
+// Form reset
+
+input,
+button,
+select,
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+// General styling for the whole website
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #6c757d;
+  padding: 1rem;
+  margin-top: auto;
+  i {
+    color: white;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+// Responsive for smaller screens
+
+@media (max-with: 768px) {
+  .search-section {
+    padding: 1rem;
+
+    .form-control {
+      width: 100% !important;
+    }
+  }
+}

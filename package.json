@@ -1,0 +1,16 @@
+{
+  "name": "auctionbidding",
+  "version": "1.0.0",
+  "description": "Front-end semester project 2 - Noroff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.86.0"
+  }
+}

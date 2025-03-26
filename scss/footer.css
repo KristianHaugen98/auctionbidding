@@ -1,0 +1,30 @@
+.footer-custom .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.footer-custom .social-icons a.social-link {
+  color: #ffffff !important;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.footer-custom .social-icons a.social-link:hover {
+  color: #007bff !important;
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+.footer-custom .social-icons a.social-link i {
+  font-size: 2.5rem;
+}
+.footer-custom p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .footer-custom {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=footer.css.map */

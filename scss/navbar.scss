@@ -1,0 +1,19 @@
+.navbar {
+  background-color: $card-bg;
+  @include box-shadow;
+
+  .nav-link {
+    color: $secondary;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .btn-primary {
+    border-radius: $border-radius;
+  }
+
+  .btn btn-success {
+    border-radius: $border-radius;
+  }
+}
