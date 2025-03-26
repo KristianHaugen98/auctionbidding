@@ -1,0 +1,33 @@
+@import "variables";
+
+.hero {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  padding: 70px 0;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    color: white;
+    border-color: $primary;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
