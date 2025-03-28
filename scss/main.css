@@ -12012,7 +12012,7 @@ textarea.form-control-lg {
 .footer-custom .social-icons {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 .footer-custom .social-icons a.social-link {
   color: #ffffff !important;
@@ -12026,7 +12026,7 @@ textarea.form-control-lg {
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 .footer-custom .social-icons a.social-link i {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .footer-custom p {
   color: rgba(255, 255, 255, 0.8);
@@ -12115,6 +12115,36 @@ textarea.form-control-lg {
   .search-section .search-input-group i {
     margin-right: 0;
   }
+}
+
+.login-section {
+  padding: 100px 0;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  margin-top: 5rem;
+}
+.login-section .login-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: none !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0) !important;
+  pointer-events: none;
+}
+.login-section .login-card * {
+  pointer-events: auto;
+}
+.login-section .login-card:hover {
+  transform: none !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0) !important;
+  cursor: default !important;
+}
+.login-section .login-card .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.card:hover {
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 input,
