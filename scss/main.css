@@ -12118,33 +12118,26 @@ textarea.form-control-lg {
 }
 
 .login-section {
-  padding: 100px 0;
-  background: linear-gradient(to right, #007bff, #0056b3);
-  margin-top: 5rem;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  flex: 1;
+  padding: 20px 0;
 }
 .login-section .login-card {
   border-radius: 15px;
   overflow: hidden;
-  transition: none !important;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0) !important;
-  pointer-events: none;
-}
-.login-section .login-card * {
-  pointer-events: auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0);
 }
 .login-section .login-card:hover {
-  transform: none !important;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0) !important;
-  cursor: default !important;
+  transform: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0);
 }
 .login-section .login-card .form-control:focus {
   border-color: #007bff;
   box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
 }
 
-.card:hover {
-  transform: none !important;
-  box-shadow: none !important;
+.footer-custom {
+  flex-shrink: 0;
 }
 
 input,
