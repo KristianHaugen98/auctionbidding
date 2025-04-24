@@ -12177,4 +12177,28 @@ footer a {
   .search-section .form-control {
     width: 100% !important;
   }
+}
+.register-section {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+.register-section .card {
+  border-radius: 15px;
+  border: none;
+}
+.register-section .card .card-body {
+  padding: 2rem;
+}
+.register-section .invalid-feedback {
+  margin-top: 0.25rem;
+}
+.register-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+.register-section a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

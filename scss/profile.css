@@ -1,0 +1,61 @@
+body.profile-page {
+  background-color: #f8f9fa;
+}
+
+.avatar-upload {
+  position: relative;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.avatar-upload .avatar-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.avatar-upload .btn-avatar-upload {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.listing-form .media.preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.listing-form .media.preview-item {
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.listing-form .media.preview-item:hover {
+  transform: scale(1.05);
+}
+
+.active-listings .listing-card {
+  transition: box-shadow 0.3s;
+}
+.active-listings .listing-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.active-listings .listing-card .deadline-bade {
+  background: #cce5ff;
+  color: #004a99;
+}
+
+@media (max-with: 768px) {
+  .avatar-upload {
+    margin-bottom: 2rem;
+  }
+  .avatar-upload .avatar-preview {
+    width: 120px;
+    height: 120px;
+  }
+}/*# sourceMappingURL=profile.css.map */

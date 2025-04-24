@@ -1,0 +1,88 @@
+@import "variables.scss";
+
+$primary: #007bff;
+$secondary: #6c757d;
+$avatar-size: 150px;
+
+@mixin media-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+// Base styles
+
+body.profile-page {
+  background-color: #f8f9fa;
+}
+
+// Avatar section
+
+.avatar-upload {
+  position: relative;
+  max-width: 200px;
+  margin: 0 auto;
+
+  .avatar-preview {
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+  }
+
+  .btn-avatar-upload {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+// Listing section
+
+.listing-form {
+  .media.preview {
+    @include media-preview-grid;
+    &-item {
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Active auctions
+
+.active-listings {
+  .listing-card {
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgb(0, 0, 0, 0.15);
+    }
+
+    .deadline-bade {
+      background: lighten($primary, 40%);
+      color: darken($primary, 20%);
+    }
+  }
+}
+
+// Responsive
+@media (max-with: 768px) {
+  .avatar-upload {
+    margin-bottom: 2rem;
+
+    .avatar-preview {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}

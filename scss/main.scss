@@ -58,3 +58,33 @@ footer {
     }
   }
 }
+
+// Registration section:
+
+.register-section {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+
+  .card {
+    border-radius: 15px;
+    border: none;
+
+    .card-body {
+      padding: 2rem;
+    }
+  }
+
+  .invalid-feedback {
+    margin-top: 0.25rem;
+  }
+  a {
+    color: $primary;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
