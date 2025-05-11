@@ -12158,6 +12158,32 @@ body {
   min-height: 100vh;
 }
 
+#clearSearch:hover {
+  background-color: red;
+}
+
+.auctions .card {
+  transition: transform 0.2s;
+}
+.auctions .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+.auctions .card .card-img-top {
+  border-bottom: 1px solid #eee;
+}
+.auctions .card .card-titel {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.auctions .card .card-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.auctions .card .btn-primary {
+  font-weight: 500;
+}
+
 footer {
   background-color: #6c757d;
   padding: 1rem;

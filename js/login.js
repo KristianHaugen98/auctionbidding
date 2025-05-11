@@ -26,8 +26,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     document.getElementById("password").classList.add("is-invalid");
     return;
   }
-  // mocking API-cal:
-
+  // API-cal:
   try {
     const response = await fetch("https://v2.api.noroff.dev/auth/login", {
       method: "POST",
@@ -42,17 +41,21 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     });
 
     if (!response.ok) {
-      errorMessage.textContent = "Wrong e-mail or password";
+      errorMessage.textContent = "Wrong email or password";
       return;
     }
 
     const data = await response.json();
     console.log("Login ok:", data);
+
+    // Lagre token og username
+    localStorage.setItem("token", data.accessToken);
+    localStorage.setItem("username", data.data.name);
+
+    // Naviger til profilsiden
+    window.location.href = "/profilepage.html";
   } catch (error) {
     errorMessage.textContent = "Something went wrong, try again";
-    console.error("Error with API cal:", error);
+    console.error("Error with API call:", error);
   }
-
-  // Navigating to profilepage:
-  window.location.href = "/profilepage.html";
 });
