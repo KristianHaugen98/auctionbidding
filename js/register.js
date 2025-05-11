@@ -12,11 +12,17 @@ document
       input.nextElementSibling.textContent = "";
     });
 
+    const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     let hasErrors = false;
 
     // Checks for empty space:
+    if (!name) {
+      showError(document.getElementById("name"), "Please give yourself a name");
+      hasErrors = true;
+    }
+
     if (!email) {
       showError(document.getElementById("email"), "E-mail is mandatory");
       hasErrors = true;
@@ -47,20 +53,20 @@ document
     if (hasErrors) return;
 
     try {
-      const response = await fetch(
-        "https://api.noroff.dev/api/v1/auction/auth/register",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, password }),
-        }
-      );
+      const response = await fetch("https://v2.api.noroff.dev/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        "X-Noroff-API-Key": "790ebff1-28aa-41f4-a642-abffd4660a3d",
+        body: JSON.stringify({ name, email, password }),
+      });
       const text = await response.text();
       const data = text ? JSON.parse(text) : null;
 
       if (response.ok) {
-        alert("Registrering vellykket! Du kan nå logge inn.");
-        window.location.href = "login.html";
+        // Saves name in localStorage:
+        localStorage.setItem("username", name);
+        alert("Registration ok, you can log in!");
+        window.location.href("login.html");
       } else {
         const errorMessage =
           data?.errors?.[0]?.message || "Registration failed";
@@ -86,10 +92,25 @@ function showError(inputElement, message) {
   inputElement.nextElementSibling.textContent = "";
 }
 
+//Validating name in real time:
+document.getElementById("name").addEventListener("input", (e) => {
+  console.log("Name input:", e.target.value);
+  const name = e.target.value.trim();
+  if (!name || !/^[a-zA-Z0-9_]+$/.test(name)) {
+    showError(
+      e.target,
+      "Username må inneholde kun bokstaver, tall eller understrek"
+    );
+  } else {
+    clearError(e.target);
+  }
+});
+
 // Validating e-mail in real time:
 document.getElementById("email").addEventListener("input", (e) => {
   console.log("Email input:", e.target.value);
-  if (!validateEmailDomain(e.target.value)) {
+  const email = e.target.value.trim(); // Fikset: Bruk value
+  if (!validateEmailDomain(email)) {
     showError(e.target, "Use @stud.noroff.no or @noroff.no");
   } else {
     clearError(e.target);
